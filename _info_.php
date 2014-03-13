@@ -6,7 +6,7 @@ $mod_logs="/usr/share/FruityWifi/logs/rpitwit.log";
 $mod_logs_history="$mod_path/includes/logs/";
 $mod_panel="show";
 $mod_isup="ps auxww | grep rpitwit | grep -v -e 'grep'";
-$mod_alias="RPitwit";
+$mod_alias="RPiTwit";
 # EXEC
 $bin_danger = "/usr/share/FruityWifi/bin/danger";
 $bin_sudo = "/usr/bin/sudo";
