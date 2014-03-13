@@ -75,7 +75,7 @@ if ($logfile != "" and $action == "delete") {
 
     &nbsp;&nbsp;version <?=$mod_version?><br>
     <? 
-    if (file_exists("/usr/s2hare/FruityWifi/conf/rpitwit_config")) { 
+    if (file_exists("/usr/share/FruityWifi/conf/rpitwit_config")) { 
         echo "$mod_alias <font style='color:lime'>installed</font><br>";
     } else {
         //echo "$mod_alias <a href='includes/module_action.php?install=install_$mod_name' style='color:red'>install</a><br>";
