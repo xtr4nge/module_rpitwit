@@ -1,19 +1,19 @@
 <? 
 /*
-	Copyright (C) 2013  xtr4nge [_AT_] gmail.com
+    Copyright (C) 2013-2014  xtr4nge [_AT_] gmail.com
 
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */ 
 ?>
 <!DOCTYPE HTML>
@@ -46,6 +46,7 @@ $(function() {
 
 include "_info_.php";
 include "../../config/config.php";
+include "../../login_check.php";
 include "../../functions.php";
 
 // Checking POST & GET variables...
@@ -76,19 +77,19 @@ if ($logfile != "" and $action == "delete") {
     &nbsp;&nbsp;version <?=$mod_version?><br>
     <? 
     if (file_exists("/usr/share/FruityWifi/conf/rpitwit_config")) { 
-        echo "$mod_alias <font style='color:lime'>installed</font><br>";
+        echo "&nbsp;&nbsp;$mod_alias <font style='color:lime'>installed</font><br>";
     } else {
         //echo "$mod_alias <a href='includes/module_action.php?install=install_$mod_name' style='color:red'>install</a><br>";
-       echo "$mod_alias <span title='check documentation'><font style='color:red'>[setup]</font></span><br>";
+       echo "&nbsp;&nbsp;$mod_alias <span title='check documentation'><font style='color:red'>[setup]</font></span><br>";
     } 
     ?>
     
     <?
     $ismoduleup = exec("$mod_isup");
     if ($ismoduleup != "") {
-        echo "$mod_alias  <font color=\"lime\"><b>enabled</b></font>.&nbsp; | <a href=\"includes/module_action.php?service=responder&action=stop&page=module\"><b>stop</b></a>";
+        echo "&nbsp;&nbsp;$mod_alias  <font color=\"lime\"><b>enabled</b></font>.&nbsp; | <a href=\"includes/module_action.php?service=responder&action=stop&page=module\"><b>stop</b></a>";
     } else { 
-        echo "$mod_alias  <font color=\"red\"><b>disabled</b></font>. | <a href=\"includes/module_action.php?service=responder&action=start&page=module\"><b>start</b></a>"; 
+        echo "&nbsp;&nbsp;$mod_alias  <font color=\"red\"><b>disabled</b></font>. | <a href=\"includes/module_action.php?service=responder&action=start&page=module\"><b>start</b></a>"; 
     }
     ?>
 

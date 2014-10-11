@@ -1,6 +1,6 @@
 <?
 $mod_name="rpitwit";
-$mod_version="1.0";
+$mod_version="1.1";
 $mod_path="/usr/share/FruityWifi/www/modules/rpitwit";
 $mod_logs="/usr/share/FruityWifi/logs/rpitwit.log"; 
 $mod_logs_history="$mod_path/includes/logs/";

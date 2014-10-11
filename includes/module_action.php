@@ -27,7 +27,7 @@ if ($regex == 1) {
     regex_standard($_GET["service"], "../msg.php", $regex_extra);
     regex_standard($_GET["action"], "../msg.php", $regex_extra);
     regex_standard($_GET["page"], "../msg.php", $regex_extra);
-    regex_standard($iface_wifi, "../msg.php", $regex_extra);
+    regex_standard($io_action, "../msg.php", $regex_extra);
     regex_standard($_GET["install"], "../msg.php", $regex_extra);
 }
 
@@ -52,7 +52,7 @@ if($service != "") {
         $exec = "$bin_route|grep default";
         $ifRouteOn = exec($exec);
         if ($ifRouteOn == "") {
-            $exec = "$bin_route add default gw 10.0.0.1";
+            $exec = "$bin_route add default gw $io_in_ip";
             exec("$bin_danger \"$exec\"" );
         }
         
